@@ -66,15 +66,48 @@ public class Paycalculatorv5 {
 			try {
 				System.out.println("\nEnter Employee Total Hour : ");
 				totalhour = myscanner.nextDouble();
+				
+	////////
+			
+				
+				 Scanner scan=new Scanner(System.in);
+				    int userInput=0,notInt=0,newInput=0;
+				    System.out.println("Enter a integer number");
+				    while (notInt == 0){
+				    	
+				    	while (notInt == 0){
+				    	    try {
+				    	        newInput=Integer.parseInt(scan.nextLine());
+				    	        userInput=newInput;
+				    	        notInt=1;
+				    	    }
+				    	    catch(NumberFormatException e){
+				    	        System.out.println("That is not an integer, please try again." );
+				    	    }
+				    	}
+				    }
+
+				        
+				    {
+				{
+
+				    char[] userInput1 = null;
+					System.out.println(userInput1);
+
+				 }
+				}
+				///////
+				
+				
 				if (totalhour >= 0 && totalhour <= 80) {
 					isTheInputCorrect = 'Y';
 				} else {
-					System.out.println("Please Enter Total Hour Between 0 to 80!!! - You entered " + totalhour);
+					System.out.println("Please Enter Total Hour Between 0 to 80 - You entered " + totalhour);
 					isTheInputCorrect = 'N';
 					tryCount++;
 				}
 			} catch (Exception e) {
-				System.out.println("Please Enter Total Hour Between 0 to 80!!! - You entered something weird .... ");
+				System.out.println("Please Enter Total Hour Between 0 to 80");
 				isTheInputCorrect = 'N';
 				myscanner = new Scanner(System.in); // new Reference has been created here
 				tryCount++;
@@ -82,7 +115,7 @@ public class Paycalculatorv5 {
 
 			// It will Check How many time user Tried to Give a Wrong Input
 			if (tryCount > 5) {
-				System.out.println("Please Run The Program Again And enter Correct Input Bye Bye Stopping .......  ");
+				System.out.println("Please Run The Program Again And enter Correct Input");
 				System.exit(0);
 			}
 
@@ -94,6 +127,10 @@ public class Paycalculatorv5 {
 			try {
 				System.out.println("Enter Employee Hourly Rate : ");
 				hourlyrate = myscanner.nextDouble();
+				
+				
+				
+				
 				if (hourlyrate >= 10 && hourlyrate <= 50) {
 					isTheInputCorrect = 'Y';
 				} else {
@@ -115,6 +152,7 @@ public class Paycalculatorv5 {
 
 		} while (isTheInputCorrect == 'N'); 
 		}
+	
 	}
 
 	public static void GrossPay() {
